@@ -1,9 +1,9 @@
 const Counter = {
   data() {
     return {
-      counter: "0"
-    }
-  }
-}
+      counter: "0",
+    };
+  },
+};
 
-Vue.createApp(Counter).mount('#counter')
+Vue.createApp(Counter).mount("#counter");

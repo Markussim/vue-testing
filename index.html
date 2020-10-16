@@ -10,28 +10,30 @@
 
   <body>
     <body>
-        <div id = "intro" style = "text-align:center;">
-           <h1>{{ message }}</h1>
-        </div>
-        <script type = "text/javascript">
-           new Vue({
-              el: '#intro',
-              data: {
-                 message: 0
-              },
-              mounted() {
-                  setInterval(() => {
-                     let elem = document.createElement('div');
+      <div id="intro" style="text-align: center">
+        <h1>{{ message }}</h1>
+      </div>
+      <script type="text/javascript">
+        let main = new Vue({
+          el: "#intro",
+          data: {
+            message: 100,
+          },
+          mounted() {
+            setInterval(() => {
+              /*let elem = document.createElement('div');
 
-                     elem.innerHTML = this.message;
+                  elem.innerHTML = this.message;
 
-                     document.getElementById('intro').appendChild(elem)
+                  document.getElementById('intro').appendChild(elem)*/
 
-                     this.message++
-                  }, 1000)
-              }
-           });
-        </script>
-     </body>
+              this.message++;
+
+              window.scrollTo(0, document.body.scrollHeight);
+            }, 0);
+          },
+        });
+      </script>
+    </body>
   </body>
 </html>
